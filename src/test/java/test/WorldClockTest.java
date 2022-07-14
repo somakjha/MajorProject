@@ -18,6 +18,7 @@ public class WorldClockTest {
 	public void openPage() {
 		wcp.openPage(propReader.fetchProperty("url"));
 	}
+	
 	@Test(priority = 1)
 	public void enterEmail()
 	{
