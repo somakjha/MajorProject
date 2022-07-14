@@ -14,9 +14,14 @@ public class WorldClockTest {
 	WorldClockPage wcp = new WorldClockPage(driver);
 	PropertiesReader propReader = new PropertiesReader();
 	
-	@Test()
+	@Test(priority = 0)
 	public void openPage() {
 		wcp.openPage(propReader.fetchProperty("url"));
+	}
+	@Test(priority = 1)
+	public void enterEmail()
+	{
+		wcp.enterEmail("somak.jha@gmail.com");
 	}
 
 }
