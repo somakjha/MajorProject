@@ -24,7 +24,7 @@ public class WorldClockTest {
 	public void enterEmail() throws Exception
 	{
 		//wcp.enterEmail("somak.jha@gmaiiil.com");
-		excelReader.getDataFromExcel();
+		System.out.println(excelReader.getDataFromExcel()[0]);
 	}
 
 }
