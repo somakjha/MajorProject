@@ -14,7 +14,7 @@ public class ExcelReader {
 	 * @throws Exception
 	 */
 	public static String[] getDataFromExcel() throws Exception {
-		String[] dataArray = new String[10];
+		String[] dataArray = new String[2];
 
 		PropertiesReader propertiesReader = new PropertiesReader();
 		
@@ -22,7 +22,10 @@ public class ExcelReader {
 		
 		String filePath = FileHelper.getBasePath() + "//src//main//resources//" + fileName;
 		
+		System.out.println(filePath);
+		
 		File file = new File(filePath);
+		
 		FileInputStream fis = new FileInputStream(file);
 
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
@@ -31,7 +34,7 @@ public class ExcelReader {
 
 		XSSFRow row = sheet.getRow(1);
 		
-		for(int i=0;i<10;i++) {
+		for(int i=0;i<2;i++) {
 			dataArray[i] = String.valueOf(row.getCell(i));
 		}
 		return dataArray;
