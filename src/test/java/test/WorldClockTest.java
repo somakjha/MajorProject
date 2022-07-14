@@ -21,7 +21,7 @@ public class WorldClockTest {
 	@Test(priority = 1)
 	public void enterEmail()
 	{
-		wcp.enterEmail("somak.jha@gmail.com");
+		wcp.enterEmail("somak.jha@gmaiiil.com");
 	}
 
 }
