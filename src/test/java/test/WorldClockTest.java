@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import handler.BrowserHandler;
 import pages.WorldClockPage;
+import reader.ExcelReader;
 import reader.PropertiesReader;
 
 public class WorldClockTest {
@@ -13,15 +14,17 @@ public class WorldClockTest {
 	WebDriver driver = BrowserHandler.getWebDriver();
 	WorldClockPage wcp = new WorldClockPage(driver);
 	PropertiesReader propReader = new PropertiesReader();
+	ExcelReader excelReader = new ExcelReader();
 	
-	@Test(priority = 0)
-	public void openPage() {
-		wcp.openPage(propReader.fetchProperty("url"));
-	}
+//	@Test(priority = 0)
+//	public void openPage() {
+//		wcp.openPage(propReader.fetchProperty("url"));
+//	}
 	@Test(priority = 1)
-	public void enterEmail()
+	public void enterEmail() throws Exception
 	{
-		wcp.enterEmail("somak.jha@gmaiiil.com");
+		//wcp.enterEmail("somak.jha@gmaiiil.com");
+		excelReader.getDataFromExcel();
 	}
 
 }
