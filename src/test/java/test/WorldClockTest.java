@@ -13,9 +13,7 @@ public class WorldClockTest {
 	
 	WebDriver driver = BrowserHandler.getWebDriver();
 	WorldClockPage wcp = new WorldClockPage(driver);
-	PropertiesReader propReader = new PropertiesReader();
-	ExcelReader excelReader = new ExcelReader();
-	
+	PropertiesReader propReader = new PropertiesReader();	
 
 //	@Test(priority = 0)
 //	public void openPage() {
@@ -25,7 +23,7 @@ public class WorldClockTest {
 	public void enterEmail() throws Exception
 	{
 		//wcp.enterEmail("somak.jha@gmaiiil.com");
-		System.out.println(excelReader.getDataFromExcel()[0]);
+		System.out.println(ExcelReader.getDataFromExcel()[0]);
 	}
 
 }
